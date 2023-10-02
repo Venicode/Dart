@@ -1,5 +1,5 @@
 void main() {
-  var nome = "Vitoria";
+  String nome = "Vitoria";
   int idade = 19;
   double altura = 1.65;
   bool pessoa = (idade !=altura);
