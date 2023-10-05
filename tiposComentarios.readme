@@ -1,0 +1,6 @@
+///Comentário de 3 barras é usado para documentação, pois é mais detacado que um comentário comum
+
+//É um comentário normal
+
+/*É um comentário usado para varias linhas sem ter que colocar as duas barras em cada linha
+*/

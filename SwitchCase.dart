@@ -1,5 +1,8 @@
 void main() {
-  var idade = 19;
+  
+  /*testando o switch case
+  o case é a variavel que irá ser usada na comparação*/
+  int idade = 19;
 
   switch (idade) {
     case > 18:
@@ -21,3 +24,4 @@ void main() {
       }
   }
 }
+
