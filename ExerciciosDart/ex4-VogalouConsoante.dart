@@ -9,6 +9,7 @@ void main(){
   while (cont <= vogais.length){
     print("Digite a letra");
     String? letra = stdin.readLineSync();
+
       if (letra != vogais[cont]){
         print("A letra é uma consoante");
         break;
