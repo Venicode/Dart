@@ -3,7 +3,7 @@
 
 import 'dart:io';
 
-void main() {
+void man() {
   print("Qual a sua idade?");
   String? idade = stdin.readLineSync();
   print("Sua idade é $idade.");
