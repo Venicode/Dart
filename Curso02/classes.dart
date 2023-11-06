@@ -4,8 +4,8 @@ void main() {
   double peso = 100.2;
   String cor = "Verde e amarelo";
   String sabor = "Doce e cítrica";
-  int tempoColheita = 25;
-  bool isMadura = DiasFaltamMadura(nome,tempoColheita);//tempoColheira é um argumento != de um parametro
+  int tempoParaColheita = 25;
+  bool isMadura = DiasFaltamMadura(nome,tempoParaColheita);//tempoColheira é um argumento != de um parametro
 
   //criando um objeto instanciando a classe Fruta
   Fruta fruta1 = Fruta("Uva", 40, "Roxo", "Doce", 20);
@@ -30,9 +30,14 @@ class Fruta {
   double peso;
   String cor;
   String sabor;
-  int tempoColheita;
+  int tempoParaColheita;
   bool? isMadura;
   //Construtor
   Fruta (this.nome, this.peso,
-      this.cor, this.sabor, this.tempoColheita, {this.isMadura});
+      this.cor, this.sabor, this.tempoParaColheita, {this.isMadura});
+  estaMadura (int diasMadura){
+    isMadura = tempoParaColheita >=diasMadura;
+    print("A sua $nome foi colhida a $tempoParaColheita dias, e precisa de $diasMadura para poder comer."
+        "Portanto, ela está madura? $isMadura");
+  }
 }
