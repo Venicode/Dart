@@ -6,9 +6,11 @@ void main() {
   String sabor = "Doce e cítrica";
   int tempoParaColheita = 25;
   bool isMadura = DiasFaltamMadura(nome,tempoParaColheita);//tempoColheira é um argumento != de um parametro
+
   //criando um objeto instanciando a classe Fruta
   Fruta fruta1 = Fruta("Uva", 40, "Roxo", "Doce", 20);
   Fruta fruta2 = Fruta("Laranja", 50, "Laranja", "Citrica", 35);
+  print(fruta1.nome);
 }
 //funcao para calcular dias até a colheita
 bool DiasFaltamMadura(String nome, int dias){
@@ -30,4 +32,13 @@ class Fruta {
   String sabor;
   int tempoParaColheita;
   bool? isMadura;
+  //Construtor
+  Fruta (this.nome, this.peso,
+      this.cor, this.sabor, this.tempoParaColheita, {this.isMadura});
+  //Metodo
+  estaMadura (int diasMadura){
+    isMadura = tempoParaColheita >=diasMadura;
+    print("A sua $nome foi colhida a $tempoParaColheita dias, e precisa de $diasMadura para poder comer."
+        "Portanto, ela está madura? $isMadura");
+  }
 }

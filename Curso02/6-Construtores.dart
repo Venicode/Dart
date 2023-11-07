@@ -30,4 +30,9 @@ class Fruta {
   String sabor;
   int tempoParaColheita;
   bool? isMadura;
+
+  //Construtor
+  Fruta (this.nome, this.peso,
+      this.cor, this.sabor, this.tempoParaColheita, {this.isMadura});
+
 }
