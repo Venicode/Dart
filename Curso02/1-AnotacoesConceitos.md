@@ -4,7 +4,7 @@
 <p>Orientada a Objetos: Dart</p>
 <p>Funcional: Javascript</p>
 <p>Procedural: Python</p>
-<p></p>Concorrente: Java</p>
+<p>Concorrente: Java</p>
 
 <h2>Orientacao a Objetos:</h2><br>
 
