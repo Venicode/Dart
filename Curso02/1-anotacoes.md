@@ -26,3 +26,4 @@ as caracteristicas do objeto que irá usar aquela classe, como se definisse um p
 <p>Os métodos são as funções de dentro da classe, definindo comportamentos para ela e para o objeto.</p>
 
 <h2>Herança</h2><br>
+<p>Ainda estudando</p>
