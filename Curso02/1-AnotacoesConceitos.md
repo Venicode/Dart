@@ -29,3 +29,7 @@ as caracteristicas do objeto que irá usar aquela classe, como se definisse um p
 <p>Herança é uma forma de reutilizar códigos entre as classes, onde é possível herdar caracteristicas genéricas
 e semelhantes comuns entre objetos, por exemplo: nome, peso e cor. Com isso, podemos criar uma classe-mãe onde irá possuir
 essas propriedades e métodos mais generalistas, que seram herdadas em classes-filha ou subclasses.</p>
+<h2>Classe Abstrata</h2><br>
+<p>Existem determinadas situações onde não queremos criar uma classe de um objeto em específico (concreto) e sim uma ideia ou uma ação,
+algo abstrato que não podemos tocar, por exemplo, fazer um bolo. Neste caso, não queremos definir um bolo de um sabor específico e sim
+a ação de fazer um bolo de qualquer sabor. Para esses objetivos, criamos uma classe abstrata.</p>
