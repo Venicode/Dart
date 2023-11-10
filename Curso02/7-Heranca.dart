@@ -1,4 +1,22 @@
 //classe Alimento
+void main() {
+  Legumes mandioca = Legumes("Macaxeira", 1200, "Marrom", true);
+  Fruta banana = Fruta("Banana", 75, "Amarelo", "Doce", 35);
+  Nozes macadamia = Nozes('Macadamia', 2, 'Branco Amarelado', 'Doce', 12, 35);
+  Citricas limao = Citricas('Limão', 100, 'Verde', 'Azedo', 15, 9);
+
+  mandioca.printAlimento();
+  banana.printAlimento();
+  macadamia.printAlimento();
+  limao.printAlimento();
+
+  mandioca.cozinhar();
+  banana.fazerSuco();
+
+  limao.isRefri(true);
+  limao.estaMadura(12);
+}
+
 class Alimento {
   String nome;
   double peso;
@@ -25,7 +43,7 @@ class Fruta extends Alimento {
       {this.isMadura})
       : super(nome, peso, cor);
 
-  //Método
+  //Métodos
   estaMadura(int diasMadura) {
     int diasParaMadura = 30;
     if (diasMadura < 30) {
@@ -70,6 +88,7 @@ class Citricas extends Fruta {
       int tempoParaColheita, this.nivelAzevedo)
       : super(nome, peso, cor, sabor, tempoParaColheita);
 
+  //Método
   void isRefri(bool existe) {
     if (existe) {
       print("Existe refrigerante de $nome");
@@ -79,4 +98,12 @@ class Citricas extends Fruta {
   }
 }
 
+//classe Nozes
+class Nozes extends Fruta {
+  double pctOleoNatural;
 
+  //Construtor
+  Nozes(String nome, double peso, String cor, String sabor,
+      int tempoParaColheita, this.pctOleoNatural)
+      : super(nome, peso, cor, sabor, tempoParaColheita);
+}
