@@ -32,7 +32,8 @@ essas propriedades e métodos mais generalistas, que seram herdadas em classes-f
 <h2>Classe Abstrata</h2><br>
 <p>Existem determinadas situações onde não queremos criar uma classe de um objeto em específico (concreto) e sim uma ideia ou uma ação,
 algo abstrato que não podemos tocar, por exemplo, fazer um bolo. Neste caso, não queremos definir um bolo de um sabor específico e sim
-a ação de fazer um bolo de qualquer sabor. Para esses objetivos, criamos uma classe abstrata.</p>
+a ação de fazer um bolo de qualquer sabor. Para esses objetivos, criamos uma classe abstrata, ou também conhecida como "Interface" em outras
+linguagens de programação.</p>
 <h2>Polimorfismo</h2>
 <p>Ao usarmos o extends ou o implements para pegar métodos de outras classes, ocorre que dependendo do caso queremos personalizar
 aquela função para a nossa classe. Com isso, utilizamos o @override para sobreescrever o método. Isso irá contar apenas para a classe
