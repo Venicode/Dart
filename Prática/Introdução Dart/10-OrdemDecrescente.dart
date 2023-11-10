@@ -9,11 +9,11 @@ void main() {
   String?num1 = stdin.readLineSync();
   numeros.add(num1 as double);
 
-  print("Digite o primeiro número");
+  print("Digite o segundo número");
   String?num2 = stdin.readLineSync();
   numeros.add(num2 as double);
 
-  print("Digite o primeiro número");
+  print("Digite o terceiro número");
   String?num3 = stdin.readLineSync();
   numeros.add(num3 as double);
 
