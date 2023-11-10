@@ -26,3 +26,6 @@ as caracteristicas do objeto que irá usar aquela classe, como se definisse um p
 <p>Os métodos são as funções de dentro da classe, definindo comportamentos para ela e para o objeto.</p>
 
 <h2>Herança</h2><br>
+<p>Herança é uma forma de reutilizar códigos entre as classes, onde é possível herdar caracteristicas genéricas
+e semelhantes comuns entre objetos, por exemplo: nome, peso e cor. Com isso, podemos criar uma classe-mãe onde irá possuir
+essas propriedades e métodos mais generalistas, que seram herdadas em classes-filha ou subclasses.</p>

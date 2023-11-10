@@ -43,3 +43,11 @@ class Alimento{
   String cor;
   Alimento (this.nome, this.peso, this.cor);
 }
+//classe Legumes
+class Legumes{
+  String nome;
+  double peso;
+  String cor;
+  bool isCozinhar;
+  Legumes (this.nome, this.peso, this.cor, this.isCozinhar);
+}
