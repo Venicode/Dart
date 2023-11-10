@@ -61,13 +61,16 @@ class ContaBancaria{
     }
   }
   realizarSaque(double saldo, double saque){
-    if(saque<saldo){
+    if(saque>saldo){
+      print("Saldo insuficiente para o saque.");
+    }
+    else if (saque== 0 || saque<0){
+      print("Por favor, digite um valor maior que 0 para realizar o saque.");
+    }
+    else{
       double novoSaldo = saldo-saque;
       print("Saque de $saque realizado com sucesos!");
       print("Seu novo saldo é ${novoSaldo.toStringAsFixed(2)}");
-    }
-    else{
-      print("Saldo insuficiente para o saque.");
     }
   }
 }
