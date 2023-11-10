@@ -1,53 +1,82 @@
-//funcao Main
-void main() {
-  String nome = "Laranja";
-  double peso = 100.2;
-  String cor = "Verde e amarelo";
-  String sabor = "Doce e cítrica";
-  int tempoParaColheita = 25;
-  bool isMadura = DiasFaltamMadura(nome,tempoParaColheita);//tempoColheira é um argumento != de um parametro
-  //criando um objeto instanciando a classe Fruta
-  Fruta fruta1 = Fruta("Uva", 40, "Roxo", "Doce", 20);
-  Fruta fruta2 = Fruta("Laranja", 50, "Laranja", "Citrica", 35);
-}
-//funcao para calcular dias até a colheita
-bool DiasFaltamMadura(String nome, int dias){
-  int diasParaMadura = 30;
-  if (dias<30) {
-    int diasFaltam = diasParaMadura - dias;
-    print ("A $nome não está madura. Faltam $diasFaltam para a colheita.");
-    return false;
-  } else{
-    print ("A $nome está madura");
-    return true;
-  }
-}
-//classe Fruta
-class Fruta {
+//classe Alimento
+class Alimento {
   String nome;
   double peso;
   String cor;
+
+  //Construtor
+  Alimento(this.nome, this.peso, this.cor);
+
+  //Método
+  void printAlimento() {
+    print("Este(a) $nome pesa $peso gramas e é $cor");
+  }
+}
+
+//classe Fruta
+class Fruta extends Alimento {
   String sabor;
   int tempoParaColheita;
   bool? isMadura;
 
   //Construtor
-  Fruta (this.nome, this.peso,
-      this.cor, this.sabor, this.tempoParaColheita, {this.isMadura});
+  Fruta(
+      String nome, double peso, String cor, this.sabor, this.tempoParaColheita,
+      {this.isMadura})
+      : super(nome, peso, cor);
 
+  //Método
+  estaMadura(int diasMadura) {
+    int diasParaMadura = 30;
+    if (diasMadura < 30) {
+      int diasFaltam = diasParaMadura - diasMadura;
+      print("A $nome não está madura. Faltam $diasFaltam para a colheita.");
+      return false;
+    } else {
+      print("A $nome está madura");
+      return true;
+    }
+  }
+
+  void fazerSuco() {
+    print("Você fez um suco de $nome");
+  }
 }
-//classe Alimento
-class Alimento{
-  String nome;
-  double peso;
-  String cor;
-  Alimento (this.nome, this.peso, this.cor);
-}
-//classe Legumes
-class Legumes{
-  String nome;
-  double peso;
-  String cor;
+
+//classe Legumes utilizando a herança da classe Alimento (super)
+class Legumes extends Alimento {
   bool isCozinhar;
-  Legumes (this.nome, this.peso, this.cor, this.isCozinhar);
+
+  //Construtor
+  Legumes(String nome, double peso, String cor, this.isCozinhar)
+      : super(nome, peso, cor);
+
+  //Método
+  void cozinhar() {
+    if (isCozinhar) {
+      print("Pronto, o $nome está cozinhando");
+    } else {
+      print("Não precisa cozinhar");
+    }
+  }
 }
+
+//classe Citricas
+class Citricas extends Fruta {
+  double nivelAzevedo;
+
+  //Construtor
+  Citricas(String nome, double peso, String cor, String sabor,
+      int tempoParaColheita, this.nivelAzevedo)
+      : super(nome, peso, cor, sabor, tempoParaColheita);
+
+  void isRefri(bool existe) {
+    if (existe) {
+      print("Existe refrigerante de $nome");
+    } else {
+      print("Não existe refrigerante de $nome");
+    }
+  }
+}
+
+
