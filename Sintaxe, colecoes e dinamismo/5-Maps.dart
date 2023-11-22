@@ -5,22 +5,21 @@ void main(){
   registrosVisitados = RegistrarDestinos("Rio de Janeiro", registrosVisitados);
   registrosVisitados = RegistrarDestinos("Rio de Janeiro", registrosVisitados);
   registrosVisitados = RegistrarDestinos("São Paulo", registrosVisitados);
-  print(registrosVisitados);
 
-  //Propriedades do Iterable (a lista e as colecoes vem do iterable
-  // e portando, adotando essas propriedades)
-  print(registrosVisitados.first);
-  print(registrosVisitados.last);
-  print(registrosVisitados.isEmpty);
-  print(registrosVisitados.length);
+  //Criando um map (dicionário)
+  Map<String,dynamic> registrarPrecos = {};
+  registrarPrecos["São Paulo"] = 1200;
+  registrarPrecos["Rio de Janeiro"] = 1500;
+  registrarPrecos["São Paulo"] = 1300;
+  registrarPrecos["New York"] = "muito caro";
+  print(registrarPrecos);
 
-  //Métodos do Iterable
-  print(registrosVisitados.contains("São Paulo"));
-  print(registrosVisitados.contains(("Natal")));
-  print(registrosVisitados.elementAt(1));
-  registrosVisitados.forEach((element) {
-    print("cidade: ${element}");
-  });
+  //lendo um map
+  print(registrarPrecos["São Paulo"]);//acessando valores das chaves
+  //deletando um map
+  registrarPrecos.remove("São Paulo");
+  print(registrarPrecos);
+
 }
 
 enum Transporte{
