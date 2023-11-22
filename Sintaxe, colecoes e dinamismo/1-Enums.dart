@@ -1,19 +1,6 @@
 void main(){
-  escolherMeioTransporte(0);
+  escolherMeio(Transporte.carro);
 }
-void escolherMeioTransporte(int locomocao){
-  if (locomocao == 0){
-    print("Vou de carro");
-  }
-  else if(locomocao == 1){
-    print("Vou de bike");
-  } else{
-    print("Vou ir de algum jeito");
-  }
-}
-void escolherMeioEnum(Transporte locomocao){
-}
-
 
 enum Transporte{
   carro,
@@ -23,4 +10,17 @@ enum Transporte{
   aviao,
   patins,
   onibus,
+}
+
+void escolherMeio(Transporte locomocao) {
+  switch (locomocao) {
+    case Transporte.carro:
+      print("vou de carro");
+      break;
+    case Transporte.bike:
+      print("vou de bike");
+      break;
+    default:
+      break;
+  }
 }
