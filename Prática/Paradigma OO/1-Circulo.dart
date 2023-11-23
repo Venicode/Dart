@@ -14,11 +14,11 @@ void main() {
   while (true) {
     switch (resposta) {
       case == '1': {
-          circulo.CalcularArea(raio);
+          circulo.CalcularArea();
           break;
         }
       case == '2': {
-          circulo.CalcularPerimetro(raio);
+          circulo.CalcularPerimetro();
           break;
         }
       default: {
@@ -35,12 +35,12 @@ class Circulo {
 
   Circulo(this.raio);
 
-  void CalcularArea(double raio) {
+  void CalcularArea() {
     double Area = 3.14 * pow(raio, 2); //a função pow realiza a exponenciação
     print("A área do círculo é ${Area.toStringAsFixed(2)}");
   }
 
-  void CalcularPerimetro(double raio) {
+  void CalcularPerimetro() {
     double Perimetro = (2 * 3.14 * raio);
     print("O perímetro do círculo é ${Perimetro.toStringAsFixed(2)}");
   }

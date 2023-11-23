@@ -18,11 +18,11 @@ void main() {
 
   switch (escolha) {
     case == '1': {
-      retangulo.CalcularArea(base: base, altura: altura);
+      retangulo.CalcularArea();
         break;
       }
     case == '2': {
-      retangulo.CalcularPerimetro(base: base, altura: altura);
+      retangulo.CalcularPerimetro();
         break;
       }
     default: {
@@ -38,12 +38,12 @@ class Retangulo {
 
   Retangulo(this.base, this.altura);
 
-  void CalcularArea({required double base, required double altura}) {
+  void CalcularArea() {
     double Area = base * altura;
     print("A área do retângulo é ${Area.toStringAsFixed(2)}");
   }
 
-  void CalcularPerimetro({required double base, required double altura}) {
+  void CalcularPerimetro() {
     double Perimetro = 2 * (base + altura);
     print("O perímetro do retângulo é ${Perimetro.toStringAsFixed(2)}");
   }
