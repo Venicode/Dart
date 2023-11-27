@@ -1,0 +1,10 @@
+Tipos de Exceptions:
+- FormatException
+- TimeoutException
+- IOException
+
+Tipos de erros:
+StackOverflowError
+OutOfMemoryError
+ArgumentError
+TypeError
