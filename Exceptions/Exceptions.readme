@@ -8,3 +8,6 @@ StackOverflowError
 OutOfMemoryError
 ArgumentError
 TypeError
+
+Pilha de Execução
+Depurador e Modo de depuração
