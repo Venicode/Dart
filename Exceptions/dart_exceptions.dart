@@ -3,10 +3,12 @@ import 'exceptions/bank_controller_exceptions.dart';
 import 'models/account.dart';
 
 void main() {
+  print(null.runtimeType);
+  Null;
   // Criando o banco
   BankController bankController = BankController();
-
   // Adicionando contas
+  // Account accountTest = Account(name: "Maria", balance: -200, isAuthenticated: true);
   bankController.addAccount(
       id: "Ricarth",
       account:
@@ -20,18 +22,22 @@ void main() {
   // Fazendo transferência
   try{
     bool result = bankController.makeTransfer(
-        idSender: "Kako", idReceiver: "Ricarth", amount: 500);
+        idSender: "Kako", idReceiver: "Ricarth", amount: 800);
     // Observando resultado
     if (result){
       print("Transação concluída com sucesso.");
     }
   } on SenderIDInvalidException catch (e){
+    print(e);
     print("O ID ${e.idSender} do remetente não é um ID válido");
   } on ReceiverIdInvalidException catch (e){
+    print(e);
     print("O ID ${e.idReceiver} do destinatário não é um ID válido");
   } on SenderNotAuthenticatedException catch (e){
+    print(e);
     print("O usuário remetente de ID '${e.idSender}' não está autenticado.");
   } on SenderBalanceLowerThanAmountException catch (e){
+    print(e);
     print("O usuário de ID '${e.idSender}' tentou enviar ${e.amount}, porém"
         " não possui saldo suficiente: ${e.senderBalance}");
   } on Exception{
