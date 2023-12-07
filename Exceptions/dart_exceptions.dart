@@ -20,12 +20,21 @@ void main() {
   // Fazendo transferência
   try{
     bool result = bankController.makeTransfer(
-        idSender: "Kako", idReceiver: "Ricarth22", amount: 700);
+        idSender: "Kako", idReceiver: "Ricarth", amount: 500);
     // Observando resultado
-    print(result);
+    if (result){
+      print("Transação concluída com sucesso.");
+    }
   } on SenderIDInvalidException catch (e){
     print("O ID ${e.idSender} do remetente não é um ID válido");
   } on ReceiverIdInvalidException catch (e){
     print("O ID ${e.idReceiver} do destinatário não é um ID válido");
+  } on SenderNotAuthenticatedException catch (e){
+    print("O usuário remetente de ID '${e.idSender}' não está autenticado.");
+  } on SenderBalanceLowerThanAmountException catch (e){
+    print("O usuário de ID '${e.idSender}' tentou enviar ${e.amount}, porém"
+        " não possui saldo suficiente: ${e.senderBalance}");
+  } on Exception{
+    print("Algo deu errado");
   }
-}
+  }

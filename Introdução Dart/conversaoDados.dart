@@ -1,4 +1,4 @@
-void main(){
+void main() {
   var idade = 19.toString();
   int idadeInt = 19;
   bool Verdade = idade == idadeInt;
