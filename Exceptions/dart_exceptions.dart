@@ -22,6 +22,7 @@ void testingNullSafety() {
 //   print(myAccount?.balance);//chamada segura
 // }
 }
+
   void main() {
     testingNullSafety();
     // Criando o banco
